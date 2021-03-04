@@ -1,0 +1,12 @@
+C:\Univer\orgainizer\bin\Release\calls.mdb
+C:\Univer\orgainizer\bin\Release\orgainizer.exe.config
+C:\Univer\orgainizer\bin\Release\orgainizer.exe
+C:\Univer\orgainizer\bin\Release\orgainizer.pdb
+C:\Univer\orgainizer\obj\Release\orgainizer.csprojAssemblyReference.cache
+C:\Univer\orgainizer\obj\Release\orgainizer.Forms.AppendForm.resources
+C:\Univer\orgainizer\obj\Release\orgainizer.MainForm.resources
+C:\Univer\orgainizer\obj\Release\orgainizer.Properties.Resources.resources
+C:\Univer\orgainizer\obj\Release\orgainizer.csproj.GenerateResource.cache
+C:\Univer\orgainizer\obj\Release\orgainizer.csproj.CoreCompileInputs.cache
+C:\Univer\orgainizer\obj\Release\orgainizer.exe
+C:\Univer\orgainizer\obj\Release\orgainizer.pdb
