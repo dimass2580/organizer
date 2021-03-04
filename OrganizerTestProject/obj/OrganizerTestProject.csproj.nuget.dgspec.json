@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Univer\\OrganizerTestProject\\OrganizerTestProject.csproj": {}
+    "C:\\Users\\алексей\\Desktop\\dimass\\organizer-main\\OrganizerTestProject\\OrganizerTestProject.csproj": {}
   },
   "projects": {
-    "C:\\Univer\\orgainizer\\orgainizer.csproj": {
+    "C:\\Users\\алексей\\Desktop\\dimass\\organizer-main\\orgainizer\\orgainizer.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Univer\\orgainizer\\orgainizer.csproj",
+        "projectUniqueName": "C:\\Users\\алексей\\Desktop\\dimass\\organizer-main\\orgainizer\\orgainizer.csproj",
         "projectName": "orgainizer",
-        "projectPath": "C:\\Univer\\orgainizer\\orgainizer.csproj"
+        "projectPath": "C:\\Users\\алексей\\Desktop\\dimass\\organizer-main\\orgainizer\\orgainizer.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Univer\\OrganizerTestProject\\OrganizerTestProject.csproj": {
+    "C:\\Users\\алексей\\Desktop\\dimass\\organizer-main\\OrganizerTestProject\\OrganizerTestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Univer\\OrganizerTestProject\\OrganizerTestProject.csproj",
+        "projectUniqueName": "C:\\Users\\алексей\\Desktop\\dimass\\organizer-main\\OrganizerTestProject\\OrganizerTestProject.csproj",
         "projectName": "OrganizerTestProject",
-        "projectPath": "C:\\Univer\\OrganizerTestProject\\OrganizerTestProject.csproj",
-        "packagesPath": "C:\\Users\\DeanRiot\\.nuget\\packages\\",
-        "outputPath": "C:\\Univer\\OrganizerTestProject\\obj\\",
+        "projectPath": "C:\\Users\\алексей\\Desktop\\dimass\\organizer-main\\OrganizerTestProject\\OrganizerTestProject.csproj",
+        "packagesPath": "C:\\Users\\алексей\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\алексей\\Desktop\\dimass\\organizer-main\\OrganizerTestProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DeanRiot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\алексей\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,8 +38,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Univer\\orgainizer\\orgainizer.csproj": {
-                "projectPath": "C:\\Univer\\orgainizer\\orgainizer.csproj"
+              "C:\\Users\\алексей\\Desktop\\dimass\\organizer-main\\orgainizer\\orgainizer.csproj": {
+                "projectPath": "C:\\Users\\алексей\\Desktop\\dimass\\organizer-main\\orgainizer\\orgainizer.csproj"
               }
             }
           }
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
