@@ -3,13 +3,13 @@ using System.Windows.Forms;
 using orgainizer.DataModels;
 using orgainizer.Data;
 using orgainizer.Data.Add;
-using orgainizer.Data.Get;
+using orgainizer.Data.Get; 
 
 namespace orgainizer.Forms
 {
-    public partial class AddIntercityCallForm : Form
+    public partial class AddCall : Form
     {
-        public AddIntercityCallForm()
+        public AddCall()
         {
             InitializeComponent();
         }
@@ -17,10 +17,10 @@ namespace orgainizer.Forms
         private void AddButton_Click(object sender, EventArgs e)
         {
             if (AddSurname.Text.Length != 0 &&
-                AddPhone.Text.Length != 0 &&
-                  AddPrice.Text.Length != 0 &&
-                    AddDuration.Text.Length != 0
-                )
+              AddPhone.Text.Length != 0 &&
+                AddPrice.Text.Length != 0 &&
+                  AddDuration.Text.Length != 0
+              )
             {
                 var price = AddPrice.Text.Replace(",", ".");
                 DateTime date = AddDatePicker.Value.Date;
@@ -36,19 +36,19 @@ namespace orgainizer.Forms
                 req.setAddRequest(new AddIntercityCall());
                 req.setGetRequest(new GetIntercityCalls());
                 req.AddReqest(model);
-                
+
                 var IntercityDataView =
                     (Application.OpenForms["IntercityCallsForm"].Controls["ControlsLayout"].Controls["IntercityDataView"]
                         as DataGridView);
                 IntercityDataView.Rows.Clear();
 
-                
+
                 var interCityLst = req.GetReqest();
-                    foreach (EventModel row in interCityLst)
-                     IntercityDataView.Rows.Add(row.ID, row.DateOfEvent, row.Event);
+                foreach (EventModel row in interCityLst)
+                    IntercityDataView.Rows.Add(row.ID, row.DateOfEvent, row.Event);
             }
             else
-               MessageBox.Show("Заполните все поля и повторите попытку", "Ошибка");
+                MessageBox.Show("Заполните все поля и повторите попытку", "Ошибка");
         }
     }
 }

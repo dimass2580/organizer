@@ -1,6 +1,4 @@
 ﻿using System.Windows.Forms;
-using orgainizer.Data.Add;
-using orgainizer.DataModels;
 
 namespace orgainizer.Forms
 {
@@ -18,7 +16,7 @@ namespace orgainizer.Forms
 
         private void AddButton_Click(object sender, System.EventArgs e)
         {
-            AddIntercityCallForm addForm = new AddIntercityCallForm();
+            AddCall addForm = new AddCall();
             addForm.ShowDialog();
         }
     }

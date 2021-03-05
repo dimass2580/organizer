@@ -85,6 +85,7 @@
     <Compile Include="DataModels\EventModel.cs" />
     <Compile Include="DataModels\IDataModel.cs" />
     <Compile Include="DataModels\IntercityCallModel.cs" />
+    <Compile Include="DataModels\IntercitySelection.cs" />
     <Compile Include="DataModels\TasksModel.cs" />
     <Compile Include="Data\Add\AddContact.cs" />
     <Compile Include="Data\Add\AddEvent.cs" />
@@ -112,6 +113,12 @@
     </Compile>
     <Compile Include="Forms\AddContactForm.Designer.cs">
       <DependentUpon>AddContactForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCall.Designer.cs">
+      <DependentUpon>AddCall.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AddTaskForm.cs">
       <SubType>Form</SubType>
@@ -165,6 +172,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AddContactForm.resx">
       <DependentUpon>AddContactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddCall.resx">
+      <DependentUpon>AddCall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddTaskForm.resx">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
