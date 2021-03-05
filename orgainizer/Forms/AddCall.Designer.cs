@@ -125,36 +125,32 @@ namespace orgainizer.Forms
             // 
             this.AddSurname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddSurname.Location = new System.Drawing.Point(3, 43);
-            this.AddSurname.Multiline = true;
             this.AddSurname.Name = "AddSurname";
-            this.AddSurname.Size = new System.Drawing.Size(414, 34);
+            this.AddSurname.Size = new System.Drawing.Size(414, 20);
             this.AddSurname.TabIndex = 0;
             // 
             // AddPhone
             // 
             this.AddPhone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddPhone.Location = new System.Drawing.Point(3, 123);
-            this.AddPhone.Multiline = true;
             this.AddPhone.Name = "AddPhone";
-            this.AddPhone.Size = new System.Drawing.Size(414, 34);
+            this.AddPhone.Size = new System.Drawing.Size(414, 20);
             this.AddPhone.TabIndex = 1;
             // 
             // AddDuration
             // 
             this.AddDuration.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddDuration.Location = new System.Drawing.Point(3, 283);
-            this.AddDuration.Multiline = true;
             this.AddDuration.Name = "AddDuration";
-            this.AddDuration.Size = new System.Drawing.Size(414, 34);
+            this.AddDuration.Size = new System.Drawing.Size(414, 20);
             this.AddDuration.TabIndex = 3;
             // 
             // AddPrice
             // 
             this.AddPrice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddPrice.Location = new System.Drawing.Point(3, 363);
-            this.AddPrice.Multiline = true;
             this.AddPrice.Name = "AddPrice";
-            this.AddPrice.Size = new System.Drawing.Size(414, 34);
+            this.AddPrice.Size = new System.Drawing.Size(414, 20);
             this.AddPrice.TabIndex = 4;
             // 
             // label1
@@ -167,6 +163,7 @@ namespace orgainizer.Forms
             this.label1.TabIndex = 5;
             this.label1.Text = "Фамилия";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // AddButton
             // 

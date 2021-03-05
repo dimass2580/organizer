@@ -97,6 +97,7 @@
     <Compile Include="Data\Deleate\DeleateEvent.cs" />
     <Compile Include="Data\Deleate\DeleateIntercityCall.cs" />
     <Compile Include="Data\Deleate\IDeleateRequest.cs" />
+    <Compile Include="Data\EncountIntercityCalls.cs" />
     <Compile Include="Data\EventEditDateRequests.cs" />
     <Compile Include="Data\Get\GetAllContacts.cs" />
     <Compile Include="Data\Get\GetAllEvents.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="Data\Update\IUpdateRequest.cs" />
     <Compile Include="Data\Update\UpdateEventDate.cs" />
     <Compile Include="Data\Update\UpdateEventText.cs" />
+    <Compile Include="Data\Update\UpdateIntercityCall.cs" />
     <Compile Include="Forms\AddContactForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,7 +255,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="calls.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

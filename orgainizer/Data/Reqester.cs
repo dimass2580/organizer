@@ -55,6 +55,13 @@ namespace orgainizer.Data
             this.updateRequest = updateRequest;
         }
 
+        public Reqester(IDeleateRequest deleateRequest,
+                       IGetRequest getRequest)
+        {
+            this.deleateRequest = deleateRequest;
+            this.getRequest = getRequest;
+        }
+
         /// <summary>
         /// производит запрос к базе данных для получения данных из таблицы
         /// </summary>

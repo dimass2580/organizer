@@ -32,12 +32,15 @@ namespace orgainizer.Forms
             this.components = new System.ComponentModel.Container();
             this.ControlsLayout = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.DelButton = new System.Windows.Forms.Button();
+            this.ChangeButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.FindResult = new System.Windows.Forms.Label();
             this.Code = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.MaxCoast = new System.Windows.Forms.Label();
+            this.MaxCost = new System.Windows.Forms.Label();
             this.SummOfCost = new System.Windows.Forms.Label();
             this.IntercityDataView = new System.Windows.Forms.DataGridView();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +52,6 @@ namespace orgainizer.Forms
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.GetByDate = new System.Windows.Forms.ToolStripMenuItem();
             this.UpdateView = new System.Windows.Forms.ToolStripMenuItem();
-            this.DelButton = new System.Windows.Forms.Button();
-            this.ChangeButton = new System.Windows.Forms.Button();
-            this.AddButton = new System.Windows.Forms.Button();
             this.ControlsLayout.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -75,7 +75,7 @@ namespace orgainizer.Forms
             this.ControlsLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.10256F));
             this.ControlsLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.89744F));
             this.ControlsLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
-            this.ControlsLayout.Size = new System.Drawing.Size(649, 450);
+            this.ControlsLayout.Size = new System.Drawing.Size(809, 450);
             this.ControlsLayout.TabIndex = 1;
             this.ControlsLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -93,8 +93,43 @@ namespace orgainizer.Forms
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(643, 49);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(803, 49);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // DelButton
+            // 
+            this.DelButton.BackgroundImage = global::orgainizer.Properties.Resources.del;
+            this.DelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DelButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DelButton.Location = new System.Drawing.Point(537, 3);
+            this.DelButton.Name = "DelButton";
+            this.DelButton.Size = new System.Drawing.Size(263, 43);
+            this.DelButton.TabIndex = 2;
+            this.DelButton.UseVisualStyleBackColor = true;
+            this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
+            // 
+            // ChangeButton
+            // 
+            this.ChangeButton.BackgroundImage = global::orgainizer.Properties.Resources.DateChange;
+            this.ChangeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ChangeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ChangeButton.Location = new System.Drawing.Point(270, 3);
+            this.ChangeButton.Name = "ChangeButton";
+            this.ChangeButton.Size = new System.Drawing.Size(261, 43);
+            this.ChangeButton.TabIndex = 1;
+            this.ChangeButton.UseVisualStyleBackColor = true;
+            // 
+            // AddButton
+            // 
+            this.AddButton.BackgroundImage = global::orgainizer.Properties.Resources.insert;
+            this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AddButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddButton.Location = new System.Drawing.Point(3, 3);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(261, 43);
+            this.AddButton.TabIndex = 0;
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -103,7 +138,7 @@ namespace orgainizer.Forms
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.Controls.Add(this.panel1, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.MaxCoast, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.MaxCost, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.SummOfCost, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 394);
@@ -111,7 +146,7 @@ namespace orgainizer.Forms
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(643, 53);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(803, 53);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // panel1
@@ -120,9 +155,9 @@ namespace orgainizer.Forms
             this.panel1.Controls.Add(this.Code);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(431, 3);
+            this.panel1.Location = new System.Drawing.Point(537, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 47);
+            this.panel1.Size = new System.Drawing.Size(263, 47);
             this.panel1.TabIndex = 0;
             // 
             // FindResult
@@ -140,8 +175,10 @@ namespace orgainizer.Forms
             this.Code.Dock = System.Windows.Forms.DockStyle.Top;
             this.Code.Location = new System.Drawing.Point(0, 13);
             this.Code.Name = "Code";
-            this.Code.Size = new System.Drawing.Size(209, 20);
+            this.Code.Size = new System.Drawing.Size(263, 20);
             this.Code.TabIndex = 1;
+            this.Code.TextChanged += new System.EventHandler(this.Code_TextChanged);
+            this.Code.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Code_KeyDown);
             // 
             // label1
             // 
@@ -153,23 +190,23 @@ namespace orgainizer.Forms
             this.label1.TabIndex = 0;
             this.label1.Text = "Количество разговоров по коду";
             // 
-            // MaxCoast
+            // MaxCost
             // 
-            this.MaxCoast.AutoSize = true;
-            this.MaxCoast.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MaxCoast.Location = new System.Drawing.Point(3, 0);
-            this.MaxCoast.Name = "MaxCoast";
-            this.MaxCoast.Size = new System.Drawing.Size(208, 53);
-            this.MaxCoast.TabIndex = 1;
-            this.MaxCoast.Text = "Максимальная стоймость разговора:";
+            this.MaxCost.AutoSize = true;
+            this.MaxCost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MaxCost.Location = new System.Drawing.Point(3, 0);
+            this.MaxCost.Name = "MaxCost";
+            this.MaxCost.Size = new System.Drawing.Size(261, 53);
+            this.MaxCost.TabIndex = 1;
+            this.MaxCost.Text = "Максимальная стоймость разговора:";
             // 
             // SummOfCost
             // 
             this.SummOfCost.AutoSize = true;
             this.SummOfCost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SummOfCost.Location = new System.Drawing.Point(217, 0);
+            this.SummOfCost.Location = new System.Drawing.Point(270, 0);
             this.SummOfCost.Name = "SummOfCost";
-            this.SummOfCost.Size = new System.Drawing.Size(208, 53);
+            this.SummOfCost.Size = new System.Drawing.Size(261, 53);
             this.SummOfCost.TabIndex = 2;
             this.SummOfCost.Text = "Суммарная стоймость разговоров:";
             // 
@@ -188,8 +225,11 @@ namespace orgainizer.Forms
             this.IntercityDataView.Location = new System.Drawing.Point(3, 58);
             this.IntercityDataView.Name = "IntercityDataView";
             this.IntercityDataView.RowHeadersWidth = 51;
-            this.IntercityDataView.Size = new System.Drawing.Size(643, 330);
+            this.IntercityDataView.Size = new System.Drawing.Size(803, 330);
             this.IntercityDataView.TabIndex = 2;
+            this.IntercityDataView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.IntercityDataView_CellEndEdit);
+            this.IntercityDataView.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.IntercityDataView_CellLeave);
+            this.IntercityDataView.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.IntercityDataView_CellParsing);
             // 
             // Surname
             // 
@@ -254,48 +294,15 @@ namespace orgainizer.Forms
             this.UpdateView.Size = new System.Drawing.Size(212, 22);
             this.UpdateView.Text = "Обновить";
             // 
-            // DelButton
-            // 
-            this.DelButton.BackgroundImage = global::orgainizer.Properties.Resources.del;
-            this.DelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DelButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DelButton.Location = new System.Drawing.Point(431, 3);
-            this.DelButton.Name = "DelButton";
-            this.DelButton.Size = new System.Drawing.Size(209, 43);
-            this.DelButton.TabIndex = 2;
-            this.DelButton.UseVisualStyleBackColor = true;
-            // 
-            // ChangeButton
-            // 
-            this.ChangeButton.BackgroundImage = global::orgainizer.Properties.Resources.DateChange;
-            this.ChangeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ChangeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ChangeButton.Location = new System.Drawing.Point(217, 3);
-            this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(208, 43);
-            this.ChangeButton.TabIndex = 1;
-            this.ChangeButton.UseVisualStyleBackColor = true;
-            // 
-            // AddButton
-            // 
-            this.AddButton.BackgroundImage = global::orgainizer.Properties.Resources.insert;
-            this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.AddButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddButton.Location = new System.Drawing.Point(3, 3);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(208, 43);
-            this.AddButton.TabIndex = 0;
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
             // IntercityCallsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 450);
+            this.ClientSize = new System.Drawing.Size(809, 450);
             this.Controls.Add(this.ControlsLayout);
             this.Name = "IntercityCallsForm";
-            this.Text = "IntercityCallsForm";
+            this.Text = "Междугородние звонки";
+            this.Shown += new System.EventHandler(this.IntercityCallsForm_Shown);
             this.ControlsLayout.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -317,7 +324,7 @@ namespace orgainizer.Forms
         private System.Windows.Forms.Label FindResult;
         private System.Windows.Forms.TextBox Code;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label MaxCoast;
+        private System.Windows.Forms.Label MaxCost;
         private System.Windows.Forms.Button DelButton;
         private System.Windows.Forms.Button ChangeButton;
         private System.Windows.Forms.Button AddButton;
