@@ -30,11 +30,8 @@ namespace orgainizer.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ControlsLayout = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.DelButton = new System.Windows.Forms.Button();
-            this.ChangeButton = new System.Windows.Forms.Button();
-            this.AddButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.FindResult = new System.Windows.Forms.Label();
@@ -52,7 +49,10 @@ namespace orgainizer.Forms
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.GetByDate = new System.Windows.Forms.ToolStripMenuItem();
             this.UpdateView = new System.Windows.Forms.ToolStripMenuItem();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.DelButton = new System.Windows.Forms.Button();
+            this.ChangeButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.ControlsLayout.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -60,24 +60,24 @@ namespace orgainizer.Forms
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // ControlsLayout
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.IntercityDataView, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.10256F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.89744F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(649, 450);
-            this.tableLayoutPanel1.TabIndex = 1;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            this.ControlsLayout.ColumnCount = 1;
+            this.ControlsLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ControlsLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ControlsLayout.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.ControlsLayout.Controls.Add(this.tableLayoutPanel3, 0, 2);
+            this.ControlsLayout.Controls.Add(this.IntercityDataView, 0, 1);
+            this.ControlsLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ControlsLayout.Location = new System.Drawing.Point(0, 0);
+            this.ControlsLayout.Name = "ControlsLayout";
+            this.ControlsLayout.RowCount = 3;
+            this.ControlsLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.10256F));
+            this.ControlsLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.89744F));
+            this.ControlsLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.ControlsLayout.Size = new System.Drawing.Size(649, 450);
+            this.ControlsLayout.TabIndex = 1;
+            this.ControlsLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -96,40 +96,6 @@ namespace orgainizer.Forms
             this.tableLayoutPanel2.Size = new System.Drawing.Size(643, 49);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // DelButton
-            // 
-            this.DelButton.BackgroundImage = global::orgainizer.Properties.Resources.del;
-            this.DelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DelButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DelButton.Location = new System.Drawing.Point(431, 3);
-            this.DelButton.Name = "DelButton";
-            this.DelButton.Size = new System.Drawing.Size(209, 43);
-            this.DelButton.TabIndex = 2;
-            this.DelButton.UseVisualStyleBackColor = true;
-            // 
-            // ChangeButton
-            // 
-            this.ChangeButton.BackgroundImage = global::orgainizer.Properties.Resources.DateChange;
-            this.ChangeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ChangeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ChangeButton.Location = new System.Drawing.Point(217, 3);
-            this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(208, 43);
-            this.ChangeButton.TabIndex = 1;
-            this.ChangeButton.UseVisualStyleBackColor = true;
-            // 
-            // AddButton
-            // 
-            this.AddButton.BackgroundImage = global::orgainizer.Properties.Resources.insert;
-            this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.AddButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddButton.Location = new System.Drawing.Point(3, 3);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(208, 43);
-            this.AddButton.TabIndex = 0;
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
@@ -144,7 +110,7 @@ namespace orgainizer.Forms
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(643, 53);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
@@ -288,15 +254,49 @@ namespace orgainizer.Forms
             this.UpdateView.Size = new System.Drawing.Size(212, 22);
             this.UpdateView.Text = "Обновить";
             // 
+            // DelButton
+            // 
+            this.DelButton.BackgroundImage = global::orgainizer.Properties.Resources.del;
+            this.DelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DelButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DelButton.Location = new System.Drawing.Point(431, 3);
+            this.DelButton.Name = "DelButton";
+            this.DelButton.Size = new System.Drawing.Size(209, 43);
+            this.DelButton.TabIndex = 2;
+            this.DelButton.UseVisualStyleBackColor = true;
+            // 
+            // ChangeButton
+            // 
+            this.ChangeButton.BackgroundImage = global::orgainizer.Properties.Resources.DateChange;
+            this.ChangeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ChangeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ChangeButton.Location = new System.Drawing.Point(217, 3);
+            this.ChangeButton.Name = "ChangeButton";
+            this.ChangeButton.Size = new System.Drawing.Size(208, 43);
+            this.ChangeButton.TabIndex = 1;
+            this.ChangeButton.UseVisualStyleBackColor = true;
+            // 
+            // AddButton
+            // 
+            this.AddButton.BackgroundImage = global::orgainizer.Properties.Resources.insert;
+            this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AddButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddButton.Location = new System.Drawing.Point(3, 3);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(208, 43);
+            this.AddButton.TabIndex = 0;
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
             // IntercityCallsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 450);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.ControlsLayout);
             this.Name = "IntercityCallsForm";
             this.Text = "IntercityCallsForm";
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.ControlsLayout.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -309,7 +309,7 @@ namespace orgainizer.Forms
         }
 
         #endregion
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel ControlsLayout;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label SummOfCost;

@@ -18,7 +18,8 @@ namespace orgainizer.Forms
 
         private void AddButton_Click(object sender, System.EventArgs e)
         {
-
+            AddIntercityCallForm addForm = new AddIntercityCallForm();
+            addForm.ShowDialog();
         }
     }
 }
