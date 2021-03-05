@@ -4,6 +4,21 @@ namespace orgainizer.DataModels
 {
     public class IntercityCallModel : IDataModel
     {
+        public IntercityCallModel(int ID, 
+                                   string Surname,
+                                      string Phone,
+                                        DateTime DateOfCall,
+                                         int Duration,
+                                            double Price)
+        {
+            this.ID = ID;
+            this.Surname = Surname;
+            this.Phone = Phone;
+            this.DateOfCall = DateOfCall;
+            this.Duration = Duration;
+            this.Price = Price;
+        }
+
         public IntercityCallModel(string Surname,
                               string Phone,
                                 DateTime DateOfCall,

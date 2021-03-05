@@ -94,11 +94,13 @@
     <Compile Include="Data\ContactsRequests.cs" />
     <Compile Include="Data\Deleate\DeleateContact.cs" />
     <Compile Include="Data\Deleate\DeleateEvent.cs" />
+    <Compile Include="Data\Deleate\DeleateIntercityCall.cs" />
     <Compile Include="Data\Deleate\IDeleateRequest.cs" />
     <Compile Include="Data\EventEditDateRequests.cs" />
     <Compile Include="Data\Get\GetAllContacts.cs" />
     <Compile Include="Data\Get\GetAllEvents.cs" />
     <Compile Include="Data\Get\GetAllTasks.cs" />
+    <Compile Include="Data\Get\GetIntercityCalls.cs" />
     <Compile Include="Data\Get\GetTodayEvents.cs" />
     <Compile Include="Data\Get\IGetRequest.cs" />
     <Compile Include="Data\Reqester.cs" />
@@ -189,7 +191,7 @@
       <DependentUpon>TasksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -238,6 +240,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="calls.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
