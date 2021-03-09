@@ -32,9 +32,6 @@ namespace orgainizer.Forms
             this.components = new System.ComponentModel.Container();
             this.ControlsLayout = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.DelButton = new System.Windows.Forms.Button();
-            this.ChangeButton = new System.Windows.Forms.Button();
-            this.AddButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.FindResult = new System.Windows.Forms.Label();
@@ -52,6 +49,10 @@ namespace orgainizer.Forms
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.GetByDate = new System.Windows.Forms.ToolStripMenuItem();
             this.UpdateView = new System.Windows.Forms.ToolStripMenuItem();
+            this.DelButton = new System.Windows.Forms.Button();
+            this.ChangeButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.searchButton = new System.Windows.Forms.Button();
             this.ControlsLayout.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -81,13 +82,15 @@ namespace orgainizer.Forms
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.17061F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.41968F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.91034F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Controls.Add(this.DelButton, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.ChangeButton, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.AddButton, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.searchButton, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -95,41 +98,6 @@ namespace orgainizer.Forms
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(803, 49);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // DelButton
-            // 
-            this.DelButton.BackgroundImage = global::orgainizer.Properties.Resources.del;
-            this.DelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DelButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DelButton.Location = new System.Drawing.Point(537, 3);
-            this.DelButton.Name = "DelButton";
-            this.DelButton.Size = new System.Drawing.Size(263, 43);
-            this.DelButton.TabIndex = 2;
-            this.DelButton.UseVisualStyleBackColor = true;
-            this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
-            // 
-            // ChangeButton
-            // 
-            this.ChangeButton.BackgroundImage = global::orgainizer.Properties.Resources.DateChange;
-            this.ChangeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ChangeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ChangeButton.Location = new System.Drawing.Point(270, 3);
-            this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(261, 43);
-            this.ChangeButton.TabIndex = 1;
-            this.ChangeButton.UseVisualStyleBackColor = true;
-            // 
-            // AddButton
-            // 
-            this.AddButton.BackgroundImage = global::orgainizer.Properties.Resources.insert;
-            this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.AddButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddButton.Location = new System.Drawing.Point(3, 3);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(261, 43);
-            this.AddButton.TabIndex = 0;
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -294,6 +262,53 @@ namespace orgainizer.Forms
             this.UpdateView.Size = new System.Drawing.Size(212, 22);
             this.UpdateView.Text = "Обновить";
             // 
+            // DelButton
+            // 
+            this.DelButton.BackgroundImage = global::orgainizer.Properties.Resources.del;
+            this.DelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DelButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DelButton.Location = new System.Drawing.Point(345, 3);
+            this.DelButton.Name = "DelButton";
+            this.DelButton.Size = new System.Drawing.Size(186, 43);
+            this.DelButton.TabIndex = 2;
+            this.DelButton.UseVisualStyleBackColor = true;
+            this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
+            // 
+            // ChangeButton
+            // 
+            this.ChangeButton.BackgroundImage = global::orgainizer.Properties.Resources.DateChange;
+            this.ChangeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ChangeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ChangeButton.Location = new System.Drawing.Point(173, 3);
+            this.ChangeButton.Name = "ChangeButton";
+            this.ChangeButton.Size = new System.Drawing.Size(166, 43);
+            this.ChangeButton.TabIndex = 1;
+            this.ChangeButton.UseVisualStyleBackColor = true;
+            // 
+            // AddButton
+            // 
+            this.AddButton.BackgroundImage = global::orgainizer.Properties.Resources.insert;
+            this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AddButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddButton.Location = new System.Drawing.Point(3, 3);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(164, 43);
+            this.AddButton.TabIndex = 0;
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // searchButton
+            // 
+            this.searchButton.BackgroundImage = global::orgainizer.Properties.Resources.search;
+            this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.searchButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchButton.Location = new System.Drawing.Point(537, 3);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(263, 43);
+            this.searchButton.TabIndex = 3;
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
             // IntercityCallsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,5 +353,6 @@ namespace orgainizer.Forms
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem GetByDate;
         private System.Windows.Forms.ToolStripMenuItem UpdateView;
+        private System.Windows.Forms.Button searchButton;
     }
 }

@@ -54,3 +54,4 @@ C:\Univer\organizer\orgainizer\bin\Debug\orgainizer.exe.config
 C:\Univer\organizer\orgainizer\bin\Debug\orgainizer.exe
 C:\Univer\organizer\orgainizer\bin\Debug\orgainizer.pdb
 C:\Univer\organizer\orgainizer\bin\Debug\calls.mdb
+C:\Univer\organizer\orgainizer\obj\Debug\orgainizer.Forms.SelectionForm.resources

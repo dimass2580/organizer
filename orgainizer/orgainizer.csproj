@@ -103,6 +103,7 @@
     <Compile Include="Data\Get\GetAllEvents.cs" />
     <Compile Include="Data\Get\GetAllTasks.cs" />
     <Compile Include="Data\Get\GetIntercityCalls.cs" />
+    <Compile Include="Data\Selection.cs" />
     <Compile Include="Data\Get\GetTodayEvents.cs" />
     <Compile Include="Data\Get\IGetRequest.cs" />
     <Compile Include="Data\Reqester.cs" />
@@ -139,6 +140,12 @@
     </Compile>
     <Compile Include="Forms\deleteDialog.Designer.cs">
       <DependentUpon>deleteDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectionForm.Designer.cs">
+      <DependentUpon>SelectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UpdateEventDateForm.cs">
       <SubType>Form</SubType>
@@ -186,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\deleteDialog.resx">
       <DependentUpon>deleteDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectionForm.resx">
+      <DependentUpon>SelectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UpdateEventDateForm.resx">
       <DependentUpon>UpdateEventDateForm.cs</DependentUpon>
@@ -257,6 +267,9 @@
     <None Include="calls.mdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -164,5 +164,11 @@ namespace orgainizer.Forms
             Thread.Sleep(1000);
             UpdateAllView();
         }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            SelectionForm select = new SelectionForm();
+            select.ShowDialog();
+        }
     }
 }

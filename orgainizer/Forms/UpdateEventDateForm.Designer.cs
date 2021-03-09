@@ -33,28 +33,28 @@ namespace orgainizer.Forms
             this.find2 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.edit2 = new System.Windows.Forms.Button();
-            this.setTime2 = new System.Windows.Forms.DateTimePicker();
-            this.setTime1 = new System.Windows.Forms.DateTimePicker();
-            this.edit1 = new System.Windows.Forms.Button();
-            this.Find1 = new System.Windows.Forms.Button();
-            this.textToFind = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.EventView = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EventText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EventView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.setTime1 = new System.Windows.Forms.DateTimePicker();
+            this.edit1 = new System.Windows.Forms.Button();
+            this.Find1 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.EventView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EventText = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textToFind = new System.Windows.Forms.TextBox();
+            this.setTime2 = new System.Windows.Forms.DateTimePicker();
+            this.edit2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EventView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EventView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EventView1)).BeginInit();
             this.SuspendLayout();
             // 
             // findTime
@@ -102,38 +102,48 @@ namespace orgainizer.Forms
             this.tabPage1.Text = "Поиск по дате";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // EventView1
             // 
-            this.tabPage2.Controls.Add(this.EventView);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.textToFind);
-            this.tabPage2.Controls.Add(this.setTime2);
-            this.tabPage2.Controls.Add(this.edit2);
-            this.tabPage2.Controls.Add(this.find2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(788, 424);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Поиск по слову";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.EventView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EventView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.EventView1.Location = new System.Drawing.Point(3, 32);
+            this.EventView1.Name = "EventView1";
+            this.EventView1.Size = new System.Drawing.Size(777, 313);
+            this.EventView1.TabIndex = 10;
             // 
-            // edit2
+            // dataGridViewTextBoxColumn1
             // 
-            this.edit2.Location = new System.Drawing.Point(531, 398);
-            this.edit2.Name = "edit2";
-            this.edit2.Size = new System.Drawing.Size(249, 23);
-            this.edit2.TabIndex = 3;
-            this.edit2.Text = "Заменить";
-            this.edit2.UseVisualStyleBackColor = true;
-            this.edit2.Click += new System.EventHandler(this.edit2_Click);
+            this.dataGridViewTextBoxColumn1.HeaderText = "Код";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
             // 
-            // setTime2
+            // dataGridViewTextBoxColumn2
             // 
-            this.setTime2.Location = new System.Drawing.Point(2, 372);
-            this.setTime2.Name = "setTime2";
-            this.setTime2.Size = new System.Drawing.Size(780, 20);
-            this.setTime2.TabIndex = 4;
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Дата";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 15;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Событие";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 1000;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 351);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Заменить на";
             // 
             // setTime1
             // 
@@ -141,6 +151,7 @@ namespace orgainizer.Forms
             this.setTime1.Name = "setTime1";
             this.setTime1.Size = new System.Drawing.Size(777, 20);
             this.setTime1.TabIndex = 8;
+            this.setTime1.Value = new System.DateTime(2020, 12, 1, 0, 0, 0, 0);
             // 
             // edit1
             // 
@@ -162,31 +173,21 @@ namespace orgainizer.Forms
             this.Find1.UseVisualStyleBackColor = true;
             this.Find1.Click += new System.EventHandler(this.Find1_Click);
             // 
-            // textToFind
+            // tabPage2
             // 
-            this.textToFind.Location = new System.Drawing.Point(3, 3);
-            this.textToFind.Multiline = true;
-            this.textToFind.Name = "textToFind";
-            this.textToFind.Size = new System.Drawing.Size(777, 59);
-            this.textToFind.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 351);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Заменить на";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 356);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Заменить на";
+            this.tabPage2.Controls.Add(this.EventView);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.textToFind);
+            this.tabPage2.Controls.Add(this.setTime2);
+            this.tabPage2.Controls.Add(this.edit2);
+            this.tabPage2.Controls.Add(this.find2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(788, 424);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Поиск по слову";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // EventView
             // 
@@ -222,55 +223,55 @@ namespace orgainizer.Forms
             this.EventText.Name = "EventText";
             this.EventText.Width = 1000;
             // 
-            // EventView1
+            // label2
             // 
-            this.EventView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EventView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.EventView1.Location = new System.Drawing.Point(3, 32);
-            this.EventView1.Name = "EventView1";
-            this.EventView1.Size = new System.Drawing.Size(777, 313);
-            this.EventView1.TabIndex = 10;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 356);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Заменить на";
             // 
-            // dataGridViewTextBoxColumn1
+            // textToFind
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Код";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
+            this.textToFind.Location = new System.Drawing.Point(3, 3);
+            this.textToFind.Multiline = true;
+            this.textToFind.Name = "textToFind";
+            this.textToFind.Size = new System.Drawing.Size(777, 59);
+            this.textToFind.TabIndex = 5;
             // 
-            // dataGridViewTextBoxColumn2
+            // setTime2
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Дата";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 15;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 70;
+            this.setTime2.Location = new System.Drawing.Point(2, 372);
+            this.setTime2.Name = "setTime2";
+            this.setTime2.Size = new System.Drawing.Size(780, 20);
+            this.setTime2.TabIndex = 4;
             // 
-            // dataGridViewTextBoxColumn3
+            // edit2
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Событие";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 1000;
+            this.edit2.Location = new System.Drawing.Point(531, 398);
+            this.edit2.Name = "edit2";
+            this.edit2.Size = new System.Drawing.Size(249, 23);
+            this.edit2.TabIndex = 3;
+            this.edit2.Text = "Заменить";
+            this.edit2.UseVisualStyleBackColor = true;
+            this.edit2.Click += new System.EventHandler(this.edit2_Click);
             // 
-            // EditEventDateForm
+            // UpdateEventDateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 450);
             this.Controls.Add(this.tabControl1);
-            this.Name = "EditEventDateForm";
+            this.Name = "UpdateEventDateForm";
             this.Text = "Смена Даты События";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EventView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EventView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EventView1)).EndInit();
             this.ResumeLayout(false);
 
         }

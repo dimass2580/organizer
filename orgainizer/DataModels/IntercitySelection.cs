@@ -6,16 +6,16 @@ namespace orgainizer.DataModels
     {
         public int ID { get; }
         public double callPrice { get; }
-        public DateTime earlyDate {get;}
-        public DateTime lastDate { get; }
+        public DateTime Date { get;}
+        public string surname { get; }
 
         public IntercitySelection(double callPrice,
-                                    DateTime earlyDate,
-                                        DateTime lastDate)
+                                        DateTime Date,
+                                            string surname)
         {
             this.callPrice = callPrice;
-            this.earlyDate = earlyDate;
-            this.lastDate = lastDate;
+            this.Date = Date;
+            this.surname = surname;
         }
 
     }
