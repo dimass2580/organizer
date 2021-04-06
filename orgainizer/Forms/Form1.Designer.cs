@@ -43,16 +43,13 @@ namespace orgainizer
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.звонкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowIntercity = new System.Windows.Forms.ToolStripMenuItem();
-            this.GetIntercityByDate = new System.Windows.Forms.ToolStripMenuItem();
             this.задачиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowTasks = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddTask = new System.Windows.Forms.ToolStripMenuItem();
             this.событияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TodayEvents = new System.Windows.Forms.ToolStripMenuItem();
             this.AllEvents = new System.Windows.Forms.ToolStripMenuItem();
             this.записнаяКнигаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HandBook_View = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьКонтактToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taskNotify = new System.Windows.Forms.NotifyIcon(this.components);
             this.LayoutPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -193,8 +190,7 @@ namespace orgainizer
             // звонкиToolStripMenuItem
             // 
             this.звонкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ShowIntercity,
-            this.GetIntercityByDate});
+            this.ShowIntercity});
             this.звонкиToolStripMenuItem.Name = "звонкиToolStripMenuItem";
             this.звонкиToolStripMenuItem.Size = new System.Drawing.Size(150, 20);
             this.звонкиToolStripMenuItem.Text = "Междугородние звонки";
@@ -202,21 +198,14 @@ namespace orgainizer
             // ShowIntercity
             // 
             this.ShowIntercity.Name = "ShowIntercity";
-            this.ShowIntercity.Size = new System.Drawing.Size(212, 22);
+            this.ShowIntercity.Size = new System.Drawing.Size(180, 22);
             this.ShowIntercity.Text = "Просмотр";
             this.ShowIntercity.Click += new System.EventHandler(this.ShowIntercity_Click);
-            // 
-            // GetIntercityByDate
-            // 
-            this.GetIntercityByDate.Name = "GetIntercityByDate";
-            this.GetIntercityByDate.Size = new System.Drawing.Size(212, 22);
-            this.GetIntercityByDate.Text = "Сделать выборку по дате";
             // 
             // задачиToolStripMenuItem
             // 
             this.задачиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ShowTasks,
-            this.AddTask});
+            this.ShowTasks});
             this.задачиToolStripMenuItem.Name = "задачиToolStripMenuItem";
             this.задачиToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.задачиToolStripMenuItem.Text = "Задачи";
@@ -224,16 +213,9 @@ namespace orgainizer
             // ShowTasks
             // 
             this.ShowTasks.Name = "ShowTasks";
-            this.ShowTasks.Size = new System.Drawing.Size(141, 22);
+            this.ShowTasks.Size = new System.Drawing.Size(180, 22);
             this.ShowTasks.Text = "Просмотр";
             this.ShowTasks.Click += new System.EventHandler(this.ShowTasks_Click);
-            // 
-            // AddTask
-            // 
-            this.AddTask.Name = "AddTask";
-            this.AddTask.Size = new System.Drawing.Size(141, 22);
-            this.AddTask.Text = "Добавление";
-            this.AddTask.Click += new System.EventHandler(this.AddTask_Click);
             // 
             // событияToolStripMenuItem
             // 
@@ -247,22 +229,21 @@ namespace orgainizer
             // TodayEvents
             // 
             this.TodayEvents.Name = "TodayEvents";
-            this.TodayEvents.Size = new System.Drawing.Size(119, 22);
+            this.TodayEvents.Size = new System.Drawing.Size(180, 22);
             this.TodayEvents.Text = "Сегодня";
             this.TodayEvents.Click += new System.EventHandler(this.сегодняToolStripMenuItem_Click);
             // 
             // AllEvents
             // 
             this.AllEvents.Name = "AllEvents";
-            this.AllEvents.Size = new System.Drawing.Size(119, 22);
+            this.AllEvents.Size = new System.Drawing.Size(180, 22);
             this.AllEvents.Text = "Все";
             this.AllEvents.Click += new System.EventHandler(this.всеToolStripMenuItem_Click);
             // 
             // записнаяКнигаToolStripMenuItem
             // 
             this.записнаяКнигаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HandBook_View,
-            this.добавитьКонтактToolStripMenuItem});
+            this.HandBook_View});
             this.записнаяКнигаToolStripMenuItem.Name = "записнаяКнигаToolStripMenuItem";
             this.записнаяКнигаToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.записнаяКнигаToolStripMenuItem.Text = "Записная Книга";
@@ -270,16 +251,9 @@ namespace orgainizer
             // HandBook_View
             // 
             this.HandBook_View.Name = "HandBook_View";
-            this.HandBook_View.Size = new System.Drawing.Size(171, 22);
+            this.HandBook_View.Size = new System.Drawing.Size(180, 22);
             this.HandBook_View.Text = "Просмотр";
             this.HandBook_View.Click += new System.EventHandler(this.HandBook_View_Click);
-            // 
-            // добавитьКонтактToolStripMenuItem
-            // 
-            this.добавитьКонтактToolStripMenuItem.Name = "добавитьКонтактToolStripMenuItem";
-            this.добавитьКонтактToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.добавитьКонтактToolStripMenuItem.Text = "Добавить контакт";
-            this.добавитьКонтактToolStripMenuItem.Click += new System.EventHandler(this.добавитьКонтактToolStripMenuItem_Click);
             // 
             // taskNotify
             // 
@@ -315,10 +289,8 @@ namespace orgainizer
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem звонкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ShowIntercity;
-        private System.Windows.Forms.ToolStripMenuItem GetIntercityByDate;
         private System.Windows.Forms.ToolStripMenuItem задачиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ShowTasks;
-        private System.Windows.Forms.ToolStripMenuItem AddTask;
         private System.Windows.Forms.Button RefreshButton;
         private System.Windows.Forms.Button Deleate;
         private System.Windows.Forms.Button Append;
@@ -334,7 +306,6 @@ namespace orgainizer
         private System.Windows.Forms.NotifyIcon taskNotify;
         private System.Windows.Forms.ToolStripMenuItem записнаяКнигаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HandBook_View;
-        private System.Windows.Forms.ToolStripMenuItem добавитьКонтактToolStripMenuItem;
     }
 }
 

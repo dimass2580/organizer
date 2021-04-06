@@ -1,27 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Univer\\organizer\\OrganizerTestProject\\OrganizerTestProject.csproj": {}
+    "C:\\Users\\DeanRiot\\Desktop\\organizer-main\\OrganizerTestProject\\OrganizerTestProject.csproj": {}
   },
   "projects": {
-    "C:\\Univer\\organizer\\orgainizer\\orgainizer.csproj": {
+    "C:\\Users\\DeanRiot\\Desktop\\organizer-main\\orgainizer\\orgainizer.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Univer\\organizer\\orgainizer\\orgainizer.csproj",
+        "projectUniqueName": "C:\\Users\\DeanRiot\\Desktop\\organizer-main\\orgainizer\\orgainizer.csproj",
         "projectName": "orgainizer",
-        "projectPath": "C:\\Univer\\organizer\\orgainizer\\orgainizer.csproj"
+        "projectPath": "C:\\Users\\DeanRiot\\Desktop\\organizer-main\\orgainizer\\orgainizer.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Univer\\organizer\\OrganizerTestProject\\OrganizerTestProject.csproj": {
+    "C:\\Users\\DeanRiot\\Desktop\\organizer-main\\OrganizerTestProject\\OrganizerTestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Univer\\organizer\\OrganizerTestProject\\OrganizerTestProject.csproj",
+        "projectUniqueName": "C:\\Users\\DeanRiot\\Desktop\\organizer-main\\OrganizerTestProject\\OrganizerTestProject.csproj",
         "projectName": "OrganizerTestProject",
-        "projectPath": "C:\\Univer\\organizer\\OrganizerTestProject\\OrganizerTestProject.csproj",
+        "projectPath": "C:\\Users\\DeanRiot\\Desktop\\organizer-main\\OrganizerTestProject\\OrganizerTestProject.csproj",
         "packagesPath": "C:\\Users\\DeanRiot\\.nuget\\packages\\",
-        "outputPath": "C:\\Univer\\organizer\\OrganizerTestProject\\obj\\",
+        "outputPath": "C:\\Users\\DeanRiot\\Desktop\\organizer-main\\OrganizerTestProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DeanRiot\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,8 +38,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Univer\\organizer\\orgainizer\\orgainizer.csproj": {
-                "projectPath": "C:\\Univer\\organizer\\orgainizer\\orgainizer.csproj"
+              "C:\\Users\\DeanRiot\\Desktop\\organizer-main\\orgainizer\\orgainizer.csproj": {
+                "projectPath": "C:\\Users\\DeanRiot\\Desktop\\organizer-main\\orgainizer\\orgainizer.csproj"
               }
             }
           }

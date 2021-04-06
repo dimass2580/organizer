@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tj4zynabpU+KvzZuAcgcnmhKNjSsK6No3tYwFOhng9RYcuCoXE5bPC0VUBPGoxtGPM68ULM0AL5wKd5F/af9lQ==",
+  "dgSpecHash": "43jEWtLZ+2C0o0o/l8lcd7yqqGwkBg+VjkeMIhpIcxr6F5h6Ot22zg/FK8aNOoMp2cfZAqDFzhPqi88tyaw2Hg==",
   "success": true,
-  "projectFilePath": "C:\\Univer\\organizer\\OrganizerTestProject\\OrganizerTestProject.csproj",
+  "projectFilePath": "C:\\Users\\DeanRiot\\Desktop\\organizer-main\\OrganizerTestProject\\OrganizerTestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DeanRiot\\.nuget\\packages\\microsoft.codecoverage\\16.9.1\\microsoft.codecoverage.16.9.1.nupkg.sha512",
     "C:\\Users\\DeanRiot\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

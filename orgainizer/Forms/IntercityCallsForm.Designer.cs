@@ -32,6 +32,10 @@ namespace orgainizer.Forms
             this.components = new System.ComponentModel.Container();
             this.ControlsLayout = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.DelButton = new System.Windows.Forms.Button();
+            this.ChangeButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.searchButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.FindResult = new System.Windows.Forms.Label();
@@ -40,19 +44,16 @@ namespace orgainizer.Forms
             this.MaxCost = new System.Windows.Forms.Label();
             this.SummOfCost = new System.Windows.Forms.Label();
             this.IntercityDataView = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.GetByDate = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpdateView = new System.Windows.Forms.ToolStripMenuItem();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CityCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.GetByDate = new System.Windows.Forms.ToolStripMenuItem();
-            this.UpdateView = new System.Windows.Forms.ToolStripMenuItem();
-            this.DelButton = new System.Windows.Forms.Button();
-            this.ChangeButton = new System.Windows.Forms.Button();
-            this.AddButton = new System.Windows.Forms.Button();
-            this.searchButton = new System.Windows.Forms.Button();
             this.ControlsLayout.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -98,6 +99,54 @@ namespace orgainizer.Forms
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(803, 49);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // DelButton
+            // 
+            this.DelButton.BackgroundImage = global::orgainizer.Properties.Resources.del;
+            this.DelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DelButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DelButton.Location = new System.Drawing.Point(345, 3);
+            this.DelButton.Name = "DelButton";
+            this.DelButton.Size = new System.Drawing.Size(186, 43);
+            this.DelButton.TabIndex = 2;
+            this.DelButton.UseVisualStyleBackColor = true;
+            this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
+            // 
+            // ChangeButton
+            // 
+            this.ChangeButton.BackgroundImage = global::orgainizer.Properties.Resources.DateChange;
+            this.ChangeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ChangeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ChangeButton.Location = new System.Drawing.Point(173, 3);
+            this.ChangeButton.Name = "ChangeButton";
+            this.ChangeButton.Size = new System.Drawing.Size(166, 43);
+            this.ChangeButton.TabIndex = 1;
+            this.ChangeButton.UseVisualStyleBackColor = true;
+            this.ChangeButton.Click += new System.EventHandler(this.ChangeButton_Click);
+            // 
+            // AddButton
+            // 
+            this.AddButton.BackgroundImage = global::orgainizer.Properties.Resources.insert;
+            this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AddButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddButton.Location = new System.Drawing.Point(3, 3);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(164, 43);
+            this.AddButton.TabIndex = 0;
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // searchButton
+            // 
+            this.searchButton.BackgroundImage = global::orgainizer.Properties.Resources.search;
+            this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.searchButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchButton.Location = new System.Drawing.Point(537, 3);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(263, 43);
+            this.searchButton.TabIndex = 3;
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -182,6 +231,7 @@ namespace orgainizer.Forms
             // 
             this.IntercityDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.IntercityDataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
             this.Surname,
             this.Phone,
             this.Date,
@@ -198,6 +248,34 @@ namespace orgainizer.Forms
             this.IntercityDataView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.IntercityDataView_CellEndEdit);
             this.IntercityDataView.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.IntercityDataView_CellLeave);
             this.IntercityDataView.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.IntercityDataView_CellParsing);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GetByDate,
+            this.UpdateView});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(213, 48);
+            // 
+            // GetByDate
+            // 
+            this.GetByDate.Name = "GetByDate";
+            this.GetByDate.Size = new System.Drawing.Size(212, 22);
+            this.GetByDate.Text = "Сделать выборку по дате";
+            // 
+            // UpdateView
+            // 
+            this.UpdateView.Name = "UpdateView";
+            this.UpdateView.Size = new System.Drawing.Size(212, 22);
+            this.UpdateView.Text = "Обновить";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
             // 
             // Surname
             // 
@@ -241,74 +319,6 @@ namespace orgainizer.Forms
             this.Cost.Name = "Cost";
             this.Cost.Width = 125;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.GetByDate,
-            this.UpdateView});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(213, 48);
-            // 
-            // GetByDate
-            // 
-            this.GetByDate.Name = "GetByDate";
-            this.GetByDate.Size = new System.Drawing.Size(212, 22);
-            this.GetByDate.Text = "Сделать выборку по дате";
-            // 
-            // UpdateView
-            // 
-            this.UpdateView.Name = "UpdateView";
-            this.UpdateView.Size = new System.Drawing.Size(212, 22);
-            this.UpdateView.Text = "Обновить";
-            // 
-            // DelButton
-            // 
-            this.DelButton.BackgroundImage = global::orgainizer.Properties.Resources.del;
-            this.DelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DelButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DelButton.Location = new System.Drawing.Point(345, 3);
-            this.DelButton.Name = "DelButton";
-            this.DelButton.Size = new System.Drawing.Size(186, 43);
-            this.DelButton.TabIndex = 2;
-            this.DelButton.UseVisualStyleBackColor = true;
-            this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
-            // 
-            // ChangeButton
-            // 
-            this.ChangeButton.BackgroundImage = global::orgainizer.Properties.Resources.DateChange;
-            this.ChangeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ChangeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ChangeButton.Location = new System.Drawing.Point(173, 3);
-            this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(166, 43);
-            this.ChangeButton.TabIndex = 1;
-            this.ChangeButton.UseVisualStyleBackColor = true;
-            // 
-            // AddButton
-            // 
-            this.AddButton.BackgroundImage = global::orgainizer.Properties.Resources.insert;
-            this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.AddButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddButton.Location = new System.Drawing.Point(3, 3);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(164, 43);
-            this.AddButton.TabIndex = 0;
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // searchButton
-            // 
-            this.searchButton.BackgroundImage = global::orgainizer.Properties.Resources.search;
-            this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.searchButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchButton.Location = new System.Drawing.Point(537, 3);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(263, 43);
-            this.searchButton.TabIndex = 3;
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
-            // 
             // IntercityCallsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,15 +354,16 @@ namespace orgainizer.Forms
         private System.Windows.Forms.Button ChangeButton;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.DataGridView IntercityDataView;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem GetByDate;
+        private System.Windows.Forms.ToolStripMenuItem UpdateView;
+        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn CityCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem GetByDate;
-        private System.Windows.Forms.ToolStripMenuItem UpdateView;
-        private System.Windows.Forms.Button searchButton;
     }
 }

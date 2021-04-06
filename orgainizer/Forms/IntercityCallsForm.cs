@@ -23,7 +23,7 @@ namespace orgainizer.Forms
                                         new GetIntercityCalls(),
                                         new UpdateIntercityCall()
                                         );
-
+        private int RowIndex;
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -54,12 +54,13 @@ namespace orgainizer.Forms
                     string code = "";
                     for (byte charNum = 0; charNum < 5; charNum++)
                         code += call.Phone[charNum];
-                    IntercityDataView.Rows.Add(call.Surname,
+                    IntercityDataView.Rows.Add(call.ID,
+                                               call.Surname,
                                                call.Phone,
                                                call.DateOfCall.ToString(),
                                                code,
                                                call.Duration.ToString(),
-                                               call.Price.ToString());
+                                               call.Price.ToString()) ;
                 }  
             }
 
@@ -79,9 +80,9 @@ namespace orgainizer.Forms
             foreach(IntercityCallModel element in elements)
             {
                 if (
-                    IntercityDataView.SelectedRows[0].Cells[0].Value.ToString() == element.Surname &&
-                    IntercityDataView.SelectedRows[0].Cells[1].Value.ToString() == element.Phone &&
-                    int.Parse(IntercityDataView.SelectedRows[0].Cells[4].Value.ToString()) == element.Duration
+                    IntercityDataView.SelectedRows[0].Cells[1].Value.ToString() == element.Surname &&
+                    IntercityDataView.SelectedRows[0].Cells[2].Value.ToString() == element.Phone &&
+                    int.Parse(IntercityDataView.SelectedRows[0].Cells[5].Value.ToString()) == element.Duration
                     )
                 {
                     model = new IntercityCallModel(element.ID);
@@ -130,13 +131,24 @@ namespace orgainizer.Forms
 
         private void IntercityDataView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            int row = e.RowIndex;
+            RowIndex = e.RowIndex;
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            SelectionForm select = new SelectionForm();
+            select.ShowDialog();
+        }
+
+        private void ChangeButton_Click(object sender, EventArgs e)
+        {
+            int row = RowIndex;
             IntercityCallModel model = new IntercityCallModel(
-                                            IntercityDataView.Rows[row].Cells[0].Value.ToString(),
                                             IntercityDataView.Rows[row].Cells[1].Value.ToString(),
-                                            DateTime.Parse(IntercityDataView.Rows[row].Cells[2].Value.ToString()),
-                                            int.Parse(IntercityDataView.Rows[row].Cells[4].Value.ToString()),
-                                            double.Parse(IntercityDataView.Rows[row].Cells[5].Value.ToString())
+                                            IntercityDataView.Rows[row].Cells[2].Value.ToString(),
+                                            DateTime.Parse(IntercityDataView.Rows[row].Cells[3].Value.ToString()),
+                                            int.Parse(IntercityDataView.Rows[row].Cells[5].Value.ToString()),
+                                            double.Parse(IntercityDataView.Rows[row].Cells[6].Value.ToString())
                                             );
             var elements = reqester.GetReqest();
             int ID = 0;
@@ -151,24 +163,16 @@ namespace orgainizer.Forms
                     ID = element.ID;
                 }
             }
-
-            model = new IntercityCallModel(ID,
-                                            IntercityDataView.Rows[row].Cells[0].Value.ToString(),
-                                            IntercityDataView.Rows[row].Cells[1].Value.ToString(),
-                                            DateTime.Parse(IntercityDataView.Rows[row].Cells[2].Value.ToString()),
-                                            int.Parse(IntercityDataView.Rows[row].Cells[4].Value.ToString()),
-                                            double.Parse(IntercityDataView.Rows[row].Cells[5].Value.ToString())
+            model = new IntercityCallModel(int.Parse(IntercityDataView.Rows[row].Cells[0].Value.ToString()),//id
+                                            IntercityDataView.Rows[row].Cells[1].Value.ToString(),//sur
+                                            IntercityDataView.Rows[row].Cells[2].Value.ToString(),//phone
+                                            DateTime.Parse(IntercityDataView.Rows[row].Cells[3].Value.ToString()),//date
+                                            int.Parse(IntercityDataView.Rows[row].Cells[5].Value.ToString()),//dur
+                                            double.Parse(IntercityDataView.Rows[row].Cells[6].Value.ToString())//cost
                                             );
 
             reqester.UpdateReqest(model);
-            Thread.Sleep(1000);
             UpdateAllView();
-        }
-
-        private void searchButton_Click(object sender, EventArgs e)
-        {
-            SelectionForm select = new SelectionForm();
-            select.ShowDialog();
         }
     }
 }

@@ -30,34 +30,34 @@ namespace orgainizer.Forms
         private void InitializeComponent()
         {
             this.LayoutP = new System.Windows.Forms.TableLayoutPanel();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.AddPercentsButton = new System.Windows.Forms.Button();
+            this.PercentsEn = new System.Windows.Forms.ComboBox();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.sortButton = new System.Windows.Forms.Button();
+            this.SortTable = new System.Windows.Forms.ComboBox();
             this.SelectionDataView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.endDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.SortTable = new System.Windows.Forms.ComboBox();
             this.startDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.sortButton = new System.Windows.Forms.Button();
-            this.AddPercentsButton = new System.Windows.Forms.Button();
-            this.PercentsEn = new System.Windows.Forms.ComboBox();
             this.startSelectionButton = new System.Windows.Forms.Button();
+            this.endDatePicker = new System.Windows.Forms.DateTimePicker();
             this.LayoutP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SelectionDataView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
             this.SuspendLayout();
             // 
             // LayoutP
@@ -78,6 +78,91 @@ namespace orgainizer.Forms
             this.LayoutP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.32809F));
             this.LayoutP.Size = new System.Drawing.Size(599, 381);
             this.LayoutP.TabIndex = 0;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(3, 65);
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.AddPercentsButton);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.PercentsEn);
+            this.splitContainer3.Size = new System.Drawing.Size(593, 25);
+            this.splitContainer3.SplitterDistance = 197;
+            this.splitContainer3.TabIndex = 3;
+            // 
+            // AddPercentsButton
+            // 
+            this.AddPercentsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddPercentsButton.Location = new System.Drawing.Point(0, 0);
+            this.AddPercentsButton.Name = "AddPercentsButton";
+            this.AddPercentsButton.Size = new System.Drawing.Size(197, 25);
+            this.AddPercentsButton.TabIndex = 0;
+            this.AddPercentsButton.Text = "Увеличить строймость разговоров на %";
+            this.AddPercentsButton.UseVisualStyleBackColor = true;
+            this.AddPercentsButton.Click += new System.EventHandler(this.AddPercentsButton_Click);
+            // 
+            // PercentsEn
+            // 
+            this.PercentsEn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PercentsEn.FormattingEnabled = true;
+            this.PercentsEn.Items.AddRange(new object[] {
+            "5%",
+            "10%",
+            "15%",
+            "20%"});
+            this.PercentsEn.Location = new System.Drawing.Point(0, 0);
+            this.PercentsEn.Name = "PercentsEn";
+            this.PercentsEn.Size = new System.Drawing.Size(392, 21);
+            this.PercentsEn.TabIndex = 1;
+            this.PercentsEn.Text = "5%";
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(3, 30);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.sortButton);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.SortTable);
+            this.splitContainer2.Size = new System.Drawing.Size(593, 29);
+            this.splitContainer2.SplitterDistance = 195;
+            this.splitContainer2.TabIndex = 2;
+            // 
+            // sortButton
+            // 
+            this.sortButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sortButton.Location = new System.Drawing.Point(0, 0);
+            this.sortButton.Name = "sortButton";
+            this.sortButton.Size = new System.Drawing.Size(195, 29);
+            this.sortButton.TabIndex = 0;
+            this.sortButton.Text = "Сортировать по столбцу";
+            this.sortButton.UseVisualStyleBackColor = true;
+            this.sortButton.Click += new System.EventHandler(this.sortButton_Click);
+            // 
+            // SortTable
+            // 
+            this.SortTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortTable.FormattingEnabled = true;
+            this.SortTable.Items.AddRange(new object[] {
+            "Стоймость разговора",
+            "Дата разговора",
+            "Фамилия Абонента"});
+            this.SortTable.Location = new System.Drawing.Point(0, 0);
+            this.SortTable.Name = "SortTable";
+            this.SortTable.Size = new System.Drawing.Size(394, 21);
+            this.SortTable.TabIndex = 0;
+            this.SortTable.Text = "Стоймость разговора";
             // 
             // SelectionDataView
             // 
@@ -128,63 +213,6 @@ namespace orgainizer.Forms
             this.splitContainer1.SplitterDistance = 197;
             this.splitContainer1.TabIndex = 1;
             // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 30);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.sortButton);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.SortTable);
-            this.splitContainer2.Size = new System.Drawing.Size(593, 29);
-            this.splitContainer2.SplitterDistance = 195;
-            this.splitContainer2.TabIndex = 2;
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(3, 65);
-            this.splitContainer3.Name = "splitContainer3";
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.AddPercentsButton);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.PercentsEn);
-            this.splitContainer3.Size = new System.Drawing.Size(593, 25);
-            this.splitContainer3.SplitterDistance = 197;
-            this.splitContainer3.TabIndex = 3;
-            // 
-            // endDatePicker
-            // 
-            this.endDatePicker.Dock = System.Windows.Forms.DockStyle.Left;
-            this.endDatePicker.Location = new System.Drawing.Point(0, 0);
-            this.endDatePicker.Name = "endDatePicker";
-            this.endDatePicker.Size = new System.Drawing.Size(228, 20);
-            this.endDatePicker.TabIndex = 1;
-            this.endDatePicker.Value = new System.DateTime(2020, 12, 1, 0, 0, 0, 0);
-            // 
-            // SortTable
-            // 
-            this.SortTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SortTable.FormattingEnabled = true;
-            this.SortTable.Items.AddRange(new object[] {
-            "Стоймость разговора",
-            "Дата разговора",
-            "Фамилия Абонента"});
-            this.SortTable.Location = new System.Drawing.Point(0, 0);
-            this.SortTable.Name = "SortTable";
-            this.SortTable.Size = new System.Drawing.Size(394, 21);
-            this.SortTable.TabIndex = 0;
-            this.SortTable.Text = "Стоймость разговора";
-            // 
             // startDatePicker
             // 
             this.startDatePicker.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -193,43 +221,6 @@ namespace orgainizer.Forms
             this.startDatePicker.Size = new System.Drawing.Size(197, 20);
             this.startDatePicker.TabIndex = 2;
             this.startDatePicker.Value = new System.DateTime(2020, 12, 1, 0, 0, 0, 0);
-            // 
-            // sortButton
-            // 
-            this.sortButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortButton.Location = new System.Drawing.Point(0, 0);
-            this.sortButton.Name = "sortButton";
-            this.sortButton.Size = new System.Drawing.Size(195, 29);
-            this.sortButton.TabIndex = 0;
-            this.sortButton.Text = "Сортировать по столбцу";
-            this.sortButton.UseVisualStyleBackColor = true;
-            this.sortButton.Click += new System.EventHandler(this.sortButton_Click);
-            // 
-            // AddPercentsButton
-            // 
-            this.AddPercentsButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddPercentsButton.Location = new System.Drawing.Point(0, 0);
-            this.AddPercentsButton.Name = "AddPercentsButton";
-            this.AddPercentsButton.Size = new System.Drawing.Size(197, 25);
-            this.AddPercentsButton.TabIndex = 0;
-            this.AddPercentsButton.Text = "Увеличить строймость разговоров на %";
-            this.AddPercentsButton.UseVisualStyleBackColor = true;
-            this.AddPercentsButton.Click += new System.EventHandler(this.AddPercentsButton_Click);
-            // 
-            // PercentsEn
-            // 
-            this.PercentsEn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PercentsEn.FormattingEnabled = true;
-            this.PercentsEn.Items.AddRange(new object[] {
-            "5%",
-            "10%",
-            "15%",
-            "20%"});
-            this.PercentsEn.Location = new System.Drawing.Point(0, 0);
-            this.PercentsEn.Name = "PercentsEn";
-            this.PercentsEn.Size = new System.Drawing.Size(392, 21);
-            this.PercentsEn.TabIndex = 1;
-            this.PercentsEn.Text = "5%";
             // 
             // startSelectionButton
             // 
@@ -242,6 +233,15 @@ namespace orgainizer.Forms
             this.startSelectionButton.UseVisualStyleBackColor = true;
             this.startSelectionButton.Click += new System.EventHandler(this.startSelectionButton_Click);
             // 
+            // endDatePicker
+            // 
+            this.endDatePicker.Dock = System.Windows.Forms.DockStyle.Left;
+            this.endDatePicker.Location = new System.Drawing.Point(0, 0);
+            this.endDatePicker.Name = "endDatePicker";
+            this.endDatePicker.Size = new System.Drawing.Size(228, 20);
+            this.endDatePicker.TabIndex = 1;
+            this.endDatePicker.Value = new System.DateTime(2020, 12, 1, 0, 0, 0, 0);
+            // 
             // SelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,19 +251,19 @@ namespace orgainizer.Forms
             this.Name = "SelectionForm";
             this.Text = "Сделать выборку";
             this.LayoutP.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SelectionDataView)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
